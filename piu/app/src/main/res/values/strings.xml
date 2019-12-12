@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PIU</string>
+    <string name="login">Login</string>
+    <string name="or">OR</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="login_with_fingerprint">Login with fingerprint</string>
+    <string name="my_home">My Home</string>
+    <string name="home">Home</string>
+    <string name="notifications">Notifications</string>
+    <string name="settings">Settings</string>
+</resources>
