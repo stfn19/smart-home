@@ -3,6 +3,8 @@ package com.example.piu;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
@@ -37,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDestinationChanged(@NonNull NavController controller,
                                              @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                if (destination.getId() == R.id.homeFragment) { //si celelalte fragmente, care vom face si trebe sa apare bottom navigation-ul
-                    bottomNavigationView.setVisibility(View.VISIBLE);
-                } else {
+                if (destination.getId() == R.id.loginFragment || destination.getId() == R.id.loginFingerprintFragment) {
                     bottomNavigationView.setVisibility(View.GONE);
+                } else {
+                    bottomNavigationView.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -49,18 +51,27 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.action_home:
-                        Toast.makeText(MainActivity.this, "home", Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.action_notifications:
-                        Toast.makeText(MainActivity.this, "notifications", Toast.LENGTH_SHORT).show();
-                        break;
                     case R.id.action_settings:
-                        Toast.makeText(MainActivity.this, "settings", Toast.LENGTH_SHORT).show();
-                        break;
+                        loadFragment(new SettingsFragment());
+                        return true;
+                    case R.id.action_notifications:
+                        //TODO:
+                        return true;
+                    case R.id.action_home:
+                        //TODO:
+                        return true;
                 }
-                return true;
+                return false;
             }
         });
     }
+
+    private void loadFragment(Fragment fragment) {
+        // load fragment
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.main_fragment, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
 }
