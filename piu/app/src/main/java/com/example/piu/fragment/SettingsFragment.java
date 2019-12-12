@@ -1,4 +1,4 @@
-package com.example.piu;
+package com.example.piu.fragment;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.piu.R;
 
 public class SettingsFragment extends Fragment {
     @Override
