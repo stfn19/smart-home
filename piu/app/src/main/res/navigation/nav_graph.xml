@@ -30,14 +30,25 @@
         android:id="@+id/homeFragment"
         android:name="com.example.piu.fragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_homeFragment_to_settings"
-            app:destination="@id/settings" />
+            android:id="@+id/action_homeFragment_to_tipsFragment"
+            app:destination="@id/tipsFragment" />
     </fragment>
-    <activity
-        android:id="@+id/settings"
-        android:name="com.example.piu.Settings"
-        android:label="activity_settings"
-        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/tipsFragment"
+        android:name="com.example.piu.fragment.TipsFragment"
+        android:label="fragment_tips"
+        tools:layout="@layout/fragment_tips" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.piu.fragment.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_tipsFragment"
+            app:destination="@id/tipsFragment" />
+    </fragment>
 </navigation>

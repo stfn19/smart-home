@@ -12,4 +12,14 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tell_us_more">Tell Us More</string>
+    <string name="done">DONE</string>
+    <string name="thank_you_for_your_feedback">Thank you for your feedback!</string>
+    <string name="how_much_do_you_enjoy_your_smart_house">How much do you enjoy Your Smart House?</string>
+    <string name="angry_smiley">Angry smiley</string>
+    <string name="sad_smiley">Sad smiley</string>
+    <string name="neutral_smiley">Neutral smiley</string>
+    <string name="happy_smiley">Happy smiley</string>
+    <string name="very_happy_smiley">Very happy smiley</string>
+    <string name="your_feedback">Your feedback</string>
 </resources>
