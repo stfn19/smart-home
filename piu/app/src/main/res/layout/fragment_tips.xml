@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/how_much_do_you_enjoy_your_smart_house"
+        android:textSize="27sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/image_angry"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/angry_smiley"
+            android:src="@drawable/ic_sentiment_very_dissatisfied_red_24dp" />
+
+        <ImageView
+            android:id="@+id/image_sad"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/sad_smiley"
+            android:src="@drawable/ic_sentiment_dissatisfied_orange_24dp" />
+
+        <ImageView
+            android:id="@+id/image_neutral"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/neutral_smiley"
+            android:src="@drawable/ic_sentiment_neutral_yellow_24dp" />
+
+        <ImageView
+            android:id="@+id/image_happy"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/happy_smiley"
+            android:src="@drawable/ic_sentiment_satisfied_turquaz_24dp" />
+
+        <ImageView
+            android:id="@+id/image_very_happy"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/very_happy_smiley"
+            android:src="@drawable/ic_sentiment_very_satisfied_green_24dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_tell_us_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/tell_us_more"
+        android:textSize="25sp"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/edit_text_tell_us_more"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:hint="@string/your_feedback"
+        android:inputType="text"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/button_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#0f0"
+        android:text="@string/done"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_thank_you"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:text="@string/thank_you_for_your_feedback"
+        android:textSize="50sp"
+        android:visibility="gone" />
+
+</LinearLayout>
