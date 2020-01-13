@@ -34,6 +34,9 @@
         <action
             android:id="@+id/action_homeFragment_to_tipsFragment"
             app:destination="@id/tipsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_rulesFragment"
+            app:destination="@id/rulesFragment" />
     </fragment>
 
     <fragment
@@ -50,5 +53,13 @@
         <action
             android:id="@+id/action_settingsFragment_to_tipsFragment"
             app:destination="@id/tipsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_rulesFragment"
+            app:destination="@id/rulesFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.example.piu.fragment.RulesFragment"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules" />
 </navigation>
