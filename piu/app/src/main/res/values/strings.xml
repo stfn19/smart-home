@@ -44,4 +44,9 @@
     <string name="hey_eugene_i_think_i_left_one_of_the_doors_open">Hey Eugene. I think I left one of the doors open...</string>
     <string name="enter_message">Enter message</string>
     <string name="send">SEND</string>
+    <string name="brandon_moore">Brandon Moore</string>
+    <string name="admin">admin</string>
+    <string name="logout">Logout</string>
+    <string name="change_password">Change password</string>
+    <string name="users">Users</string>
 </resources>

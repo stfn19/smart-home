@@ -37,6 +37,9 @@
         <action
             android:id="@+id/action_homeFragment_to_supportFragment"
             app:destination="@id/supportFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_accountInfoFragment"
+            app:destination="@id/accountInfoFragment" />
     </fragment>
 
     <fragment
@@ -86,4 +89,9 @@
         android:name="com.example.piu.fragment.ChatFragment"
         android:label="fragment_chat"
         tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/accountInfoFragment"
+        android:name="com.example.piu.fragment.AccountInfoFragment"
+        android:label="fragment_account_info"
+        tools:layout="@layout/fragment_account_info" />
 </navigation>
