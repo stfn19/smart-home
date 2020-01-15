@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 
 import com.example.piu.R;
 
+import butterknife.ButterKnife;
+
 public class RulesFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,

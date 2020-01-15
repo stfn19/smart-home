@@ -22,4 +22,27 @@
     <string name="happy_smiley">Happy smiley</string>
     <string name="very_happy_smiley">Very happy smiley</string>
     <string name="your_feedback">Your feedback</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="chat">chat</string>
+    <string name="non_odio_euismod">Non odio euismod</string>
+    <string name="lacinia_at_quis">lacinia at quis</string>
+    <string name="text1">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis.</string>
+    <string name="auctor_neque">auctor neque</string>
+    <string name="a_cras_semper">A cras semper</string>
+    <string name="text2">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis. Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis. Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis.</string>
+    <string name="ultricies_mi_eget">ultricies mi eget</string>
+    <string name="maecenas">Maecenas</string>
+    <string name="our_email">Our email:</string>
+    <string name="email">smarthome@smarthome.com</string>
+    <string name="send_us_a_message">Send us a message</string>
+    <string name="tipical_response_in_2_working_days">Tipical response in 2 working days.</string>
+    <string name="name">name</string>
+    <string name="email_address">email address</string>
+    <string name="send_message">send message</string>
+    <string name="eugene_lawson">Eugene Lawson</string>
+    <string name="hey_there_robert_how_can_i_help_you_today">Hey there Robert, How can I help you today?</string>
+    <string name="hey_eugene_i_think_i_left_one_of_the_doors_open">Hey Eugene. I think I left one of the doors open...</string>
+    <string name="enter_message">Enter message</string>
+    <string name="send">SEND</string>
+    <string name="music">Music</string>
 </resources>

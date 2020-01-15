@@ -17,15 +17,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class SettingsFragment extends Fragment {
-    private SettingsFragment mSettingsFragment = null;
-
-    public SettingsFragment getSettingsFragment() {
-        if (mSettingsFragment == null) mSettingsFragment = new SettingsFragment();
-        return mSettingsFragment;
-    }
-
     @BindView(R.id.tips_option)
     TextView mTips;
+
+    @BindView(R.id.support_option)
+    TextView mSupport;
 
     @BindView(R.id.rules_option)
     TextView mRules;
@@ -49,6 +45,13 @@ public class SettingsFragment extends Fragment {
             public void onClick(View view) {
 //                if (Navigation.findNavController(mView).getCurrentDestination().getId() == R.id.mSettingsFragment)
                     Navigation.findNavController(mView).navigate(R.id.action_homeFragment_to_tipsFragment);
+            }
+        });
+
+        mSupport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(mView).navigate(R.id.action_homeFragment_to_supportFragment);
             }
         });
 

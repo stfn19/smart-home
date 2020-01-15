@@ -35,6 +35,9 @@
             android:id="@+id/action_homeFragment_to_tipsFragment"
             app:destination="@id/tipsFragment" />
         <action
+            android:id="@+id/action_homeFragment_to_supportFragment"
+            app:destination="@id/supportFragment" />
+        <action
             android:id="@+id/action_homeFragment_to_rulesFragment"
             app:destination="@id/rulesFragment" />
     </fragment>
@@ -53,10 +56,39 @@
         <action
             android:id="@+id/action_settingsFragment_to_tipsFragment"
             app:destination="@id/tipsFragment" />
-        <action
-            android:id="@+id/action_settingsFragment_to_rulesFragment"
-            app:destination="@id/rulesFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.example.piu.fragment.SupportFragment"
+        android:label="fragment_support"
+        tools:layout="@layout/fragment_support" >
+        <action
+            android:id="@+id/action_supportFragment_to_termsCondPrivPolFragment"
+            app:destination="@id/termsCondPrivPolFragment" />
+        <action
+            android:id="@+id/action_supportFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+        <action
+            android:id="@+id/action_supportFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/termsCondPrivPolFragment"
+        android:name="com.example.piu.fragment.TermsCondPrivPolFragment"
+        android:label="fragment_termscond_privpol"
+        tools:layout="@layout/fragment_termscond_privpol" >
+    </fragment>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.example.piu.fragment.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.piu.fragment.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
     <fragment
         android:id="@+id/rulesFragment"
         android:name="com.example.piu.fragment.RulesFragment"
