@@ -17,6 +17,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class SettingsFragment extends Fragment {
+
+    @BindView(R.id.account_option)
+    TextView mAccount;
+
     @BindView(R.id.tips_option)
     TextView mTips;
 
@@ -40,25 +44,33 @@ public class SettingsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        mAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(mView).navigate(R.id.accountInfoFragment);
+            }
+        });
+
         mTips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                if (Navigation.findNavController(mView).getCurrentDestination().getId() == R.id.mSettingsFragment)
-                    Navigation.findNavController(mView).navigate(R.id.action_homeFragment_to_tipsFragment);
+                    Navigation.findNavController(mView).navigate(R.id.tipsFragment);
             }
         });
 
         mSupport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(mView).navigate(R.id.action_homeFragment_to_supportFragment);
+                Navigation.findNavController(mView).navigate(R.id.supportFragment);
             }
         });
 
         mRules.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(mView).navigate(R.id.action_homeFragment_to_rulesFragment);
+                Navigation.findNavController(mView).navigate(R.id.rulesFragment);
             }
         });
     }
