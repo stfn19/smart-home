@@ -49,4 +49,7 @@
     <string name="logout">Logout</string>
     <string name="change_password">Change password</string>
     <string name="users">Users</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="new_password_again">New Password Again</string>
 </resources>

@@ -93,5 +93,29 @@
         android:id="@+id/accountInfoFragment"
         android:name="com.example.piu.fragment.AccountInfoFragment"
         android:label="fragment_account_info"
-        tools:layout="@layout/fragment_account_info" />
+        tools:layout="@layout/fragment_account_info" >
+        <action
+            android:id="@+id/action_accountInfoFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_accountInfoFragment_to_usersFragment"
+            app:destination="@id/usersFragment" />
+        <action
+            android:id="@+id/action_accountInfoFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.example.piu.fragment.UsersFragment"
+        android:label="fragment_users"
+        tools:layout="@layout/fragment_users" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.piu.fragment.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" >
+        <action
+            android:id="@+id/action_changePasswordFragment_to_accountInfoFragment"
+            app:destination="@id/accountInfoFragment" />
+    </fragment>
 </navigation>

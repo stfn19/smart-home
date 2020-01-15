@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,16 +16,10 @@ import com.example.piu.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class AccountInfoFragment extends Fragment {
+public class ChangePasswordFragment extends Fragment {
 
-    @BindView(R.id.change_password)
-    TextView mChangePassword;
-
-    @BindView(R.id.users)
-    TextView mUsers;
-
-    @BindView(R.id.logout)
-    TextView mLogout;
+    @BindView(R.id.change_password_button)
+    Button mChangePassword;
 
     private View mView;
 
@@ -34,7 +27,7 @@ public class AccountInfoFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        mView = inflater.inflate(R.layout.fragment_account_info, container, false);
+        mView = inflater.inflate(R.layout.fragment_change_password, container, false);
         ButterKnife.bind(this, mView);
         return mView;
     }
@@ -42,25 +35,11 @@ public class AccountInfoFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         mChangePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //todo: nav to change password fragment
-                Navigation.findNavController(mView).navigate(R.id.action_accountInfoFragment_to_changePasswordFragment);
-            }
-        });
-
-        mUsers.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(mView).navigate(R.id.action_accountInfoFragment_to_usersFragment);
-            }
-        });
-
-        mLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(mView).navigate(R.id.action_accountInfoFragment_to_loginFragment);
+                Navigation.findNavController(mView).navigate(R.id.action_changePasswordFragment_to_accountInfoFragment);
             }
         });
     }
