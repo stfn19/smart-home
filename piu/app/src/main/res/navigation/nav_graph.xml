@@ -43,6 +43,15 @@
         <action
             android:id="@+id/action_homeFragment_to_accountInfoFragment"
             app:destination="@id/accountInfoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_deviceListFragment"
+            app:destination="@id/deviceListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_roomFragment2"
+            app:destination="@id/roomFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_garbageManagementFragment"
+            app:destination="@id/garbageManagementFragment" />
     </fragment>
 
     <fragment
@@ -59,7 +68,54 @@
         <action
             android:id="@+id/action_settingsFragment_to_tipsFragment"
             app:destination="@id/tipsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_garbageManagementFragment"
+            app:destination="@id/garbageManagementFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/deviceListFragment"
+        android:name="com.example.piu.fragment.DeviceListFragment"
+        android:label="fragment_device_list"
+        tools:layout="@layout/fragment_device_list" />
+    <fragment
+        android:id="@+id/roomFragment2"
+        android:name="com.example.piu.fragment.RoomFragment"
+        android:label="fragment_room"
+        tools:layout="@layout/fragment_room">
+        <argument
+            android:name="roomName"
+            app:argType="string[]" />
+        <action
+            android:id="@+id/action_roomFragment2_to_roomFeaturesFragment"
+            app:destination="@id/roomFeaturesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/garbageManagementFragment"
+        android:name="com.example.piu.fragment.GarbageManagementFragment"
+        android:label="fragment_garbage_management"
+        tools:layout="@layout/fragment_garbage_management" >
+        <action
+            android:id="@+id/action_garbageManagementFragment_to_viewTotalRecycleFragment"
+            app:destination="@id/viewTotalRecycleFragment" />
+        <action
+            android:id="@+id/action_garbageManagementFragment_to_recycleCategoriesFragment"
+            app:destination="@id/recycleCategoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewTotalRecycleFragment"
+        android:name="com.example.piu.fragment.ViewTotalRecycleFragment"
+        android:label="fragment_view_total_recycle"
+        tools:layout="@layout/fragment_view_total_recycle" />
+    <fragment
+    android:id="@+id/recycleCategoriesFragment"
+    android:name="com.example.piu.fragment.RecycleCategoriesFragment"
+    android:label="fragment_recycle_categories"
+    tools:layout="@layout/fragment_recycle_categories" />
+    <fragment
+        android:id="@+id/roomFeaturesFragment"
+        android:name="com.example.piu.fragment.RoomFeaturesFragment"
+        android:label="fragment_room_features"
+        tools:layout="@layout/fragment_room_features" />
     <fragment
         android:id="@+id/supportFragment"
         android:name="com.example.piu.fragment.SupportFragment"
@@ -126,4 +182,5 @@
             android:id="@+id/action_changePasswordFragment_to_accountInfoFragment"
             app:destination="@id/accountInfoFragment" />
     </fragment>
+
 </navigation>

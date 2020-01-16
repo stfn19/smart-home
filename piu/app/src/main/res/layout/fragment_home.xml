@@ -1,18 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#fff">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/home"
         android:text="@string/my_home"
         android:textColor="#47525E"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-16dp">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="155dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorPrimary"
+            android:foreground="@drawable/house"
+            android:foregroundGravity="center_vertical|center"
+            android:gravity="center"
+            />
+
+        <Button
+            android:id="@+id/device_list"
+            android:layout_width="155dp"
+            android:layout_height="92dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="50dp"
+            android:background="@color/colorPrimary"
+            android:text="All devices: 50"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/bedroom"
+            android:layout_width="155dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorWhite"
+            android:foreground="@drawable/bed"
+            android:text="Bedroom: 5"
+            android:textAllCaps="false"
+            android:gravity="bottom|center"
+            android:foregroundGravity="center_vertical|center"
+
+            />
+        <Button
+            android:id="@+id/living_room"
+            android:layout_width="155dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorWhite"
+            android:foreground="@drawable/sofa"
+            android:text="Living room: 10"
+            android:textAllCaps="false"
+            android:gravity="bottom|center"
+            android:foregroundGravity="center_vertical|center"
+            />
+
+
+        <Button
+            android:id="@+id/bathroom"
+            android:layout_width="155dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="310dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorWhite"
+            android:foreground="@drawable/bathtub"
+            android:foregroundGravity="center_vertical|center"
+            android:text="Bathroom: 3"
+            android:textAllCaps="false"
+            android:gravity="bottom|center"/>
+
+        <Button
+            android:id="@+id/kitchen"
+            android:layout_width="155dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="310dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorWhite"
+            android:foreground="@drawable/kitchen"
+            android:foregroundGravity="center_vertical|center"
+            android:text="Kitchen: 7"
+            android:textAllCaps="false"
+            android:gravity="bottom|center" />
+
+        <Button
+            android:id="@+id/store"
+            android:layout_width="155dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="440dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorWhite"
+            android:foreground="@drawable/store"
+            android:foregroundGravity="center_vertical|center"
+            android:text="Store room: 11"
+            android:textAllCaps="false"
+            android:gravity="bottom|center" />
+
+
+        <Button
+            android:id="@+id/study_room"
+            android:layout_width="155dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="440dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorWhite"
+            android:foreground="@drawable/book"
+            android:foregroundGravity="center_vertical|center"
+            android:text="Study room: 2"
+            android:textAllCaps="false"
+            android:gravity="bottom|center" />
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
