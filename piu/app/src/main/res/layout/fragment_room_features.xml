@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    tools:context="fragment.RoomFragment"
+    android:layout_height="fill_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="fragment.DeviceListFragment"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="36dp">
+
+            <TextView
+                android:id="@+id/titleFeature"
+                android:layout_width="150dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                android:foregroundGravity="center_vertical|center"
+                android:gravity="bottom|center"
+                android:text="Lighting"
+                android:textColor="@color/colorBlack"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/titleLight"
+                android:layout_width="150dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                android:foregroundGravity="center_vertical|center"
+                android:gravity="bottom|center"
+                android:text="Bed Lamp"
+                android:textColor="@color/colorBlack"
+                android:textAllCaps="false"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imageFeature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="200dp"
+                android:src="@drawable/lamp"
+               />
+            <TextView
+                android:id="@+id/titleMode"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="350dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                android:foregroundGravity="center_vertical|center"
+                android:gravity="bottom|center"
+                android:text="Mode"
+                android:textColor="@color/colorBlack"
+                android:textAllCaps="false"
+                android:textStyle="bold"/>
+            <Button
+                android:id="@+id/buttonMorning"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="350dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/colorWhite"
+                android:foregroundGravity="center_vertical|center"
+                android:gravity="bottom|center"
+                android:text="Morning"
+                android:textAllCaps="false" />
+            <Button
+                android:id="@+id/buttonDay"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="350dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/colorWhite"
+                android:foregroundGravity="center_vertical|center"
+                android:gravity="bottom|center"
+                android:text="Day"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/buttonNight"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="300dp"
+                android:layout_marginTop="350dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/colorWhite"
+                android:foregroundGravity="center_vertical|center"
+                android:gravity="bottom|center"
+                android:text="Night"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/titleIntensity"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="450dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                android:foregroundGravity="center_vertical|center"
+                android:gravity="bottom|center"
+                android:text="Intensity"
+                android:textColor="@color/colorBlack"
+                android:textAllCaps="false"
+                android:textStyle="bold"/>
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="133dp"
+                android:layout_height="93dp"
+                android:max="10"
+                android:progress="3"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="450dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"/>
+
+
+            <ToggleButton
+                android:id="@+id/buttonOnOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ToggleButton"
+                android:layout_marginStart="310dp"
+                android:layout_marginTop="160dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp" />
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

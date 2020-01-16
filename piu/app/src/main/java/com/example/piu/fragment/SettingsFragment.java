@@ -12,23 +12,26 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.piu.R;
+import com.example.piu.model.OnBackPressed;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SettingsFragment extends Fragment {
+public class SettingsFragment extends Fragment  implements OnBackPressed{
+    private SettingsFragment mSettingsFragment = null;
 
-    @BindView(R.id.account_option)
-    TextView mAccount;
+    public SettingsFragment getSettingsFragment() {
+        if (mSettingsFragment == null) mSettingsFragment = new SettingsFragment();
+        return mSettingsFragment;
+    }
 
     @BindView(R.id.tips_option)
     TextView mTips;
 
-    @BindView(R.id.support_option)
-    TextView mSupport;
-
-    @BindView(R.id.rules_option)
-    TextView mRules;
+    @BindView(R.id.garbage_option)
+    TextView mGarbageOption;
 
     private View mView;
 
@@ -44,39 +47,24 @@ public class SettingsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        mAccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(mView).navigate(R.id.accountInfoFragment);
-            }
-        });
-
-        mTips.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        mTips.setOnClickListener(view12 -> {
 //                if (Navigation.findNavController(mView).getCurrentDestination().getId() == R.id.mSettingsFragment)
-                    Navigation.findNavController(mView).navigate(R.id.tipsFragment);
-            }
+                Navigation.findNavController(mView).navigate(R.id.action_homeFragment_to_tipsFragment);
+        });
+       // if (Navigation.findNavController(mView).getCurrentDestination().getId() == R.id.settingsFragment){
+        mGarbageOption.setOnClickListener(view1 ->{
+        //if (Navigation.findNavController(mView).getCurrentDestination().getId() == R.id.settingsFragment) {
+            Navigation.findNavController(mView).navigate(R.id.action_homeFragment_to_garbageManagementFragment);
+
         });
 
-        mSupport.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(mView).navigate(R.id.supportFragment);
-            }
-        });
 
-        mRules.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(mView).navigate(R.id.rulesFragment);
-            }
-        });
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
     }
+
+    public void onBackPressed() { getActivity().getSupportFragmentManager().popBackStack();}
 }

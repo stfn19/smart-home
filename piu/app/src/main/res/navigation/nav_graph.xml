@@ -35,14 +35,14 @@
             android:id="@+id/action_homeFragment_to_tipsFragment"
             app:destination="@id/tipsFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_supportFragment"
-            app:destination="@id/supportFragment" />
+            android:id="@+id/action_homeFragment_to_deviceListFragment"
+            app:destination="@id/deviceListFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_rulesFragment"
-            app:destination="@id/rulesFragment" />
+            android:id="@+id/action_homeFragment_to_roomFragment2"
+            app:destination="@id/roomFragment2" />
         <action
-            android:id="@+id/action_homeFragment_to_accountInfoFragment"
-            app:destination="@id/accountInfoFragment" />
+            android:id="@+id/action_homeFragment_to_garbageManagementFragment"
+            app:destination="@id/garbageManagementFragment" />
     </fragment>
 
     <fragment
@@ -59,71 +59,53 @@
         <action
             android:id="@+id/action_settingsFragment_to_tipsFragment"
             app:destination="@id/tipsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_garbageManagementFragment"
+            app:destination="@id/garbageManagementFragment" />
     </fragment>
     <fragment
-        android:id="@+id/supportFragment"
-        android:name="com.example.piu.fragment.SupportFragment"
-        android:label="fragment_support"
-        tools:layout="@layout/fragment_support" >
+        android:id="@+id/deviceListFragment"
+        android:name="com.example.piu.fragment.DeviceListFragment"
+        android:label="fragment_device_list"
+        tools:layout="@layout/fragment_device_list" />
+    <fragment
+        android:id="@+id/roomFragment2"
+        android:name="com.example.piu.fragment.RoomFragment"
+        android:label="fragment_room"
+        tools:layout="@layout/fragment_room">
+        <argument
+            android:name="roomName"
+            app:argType="string[]" />
         <action
-            android:id="@+id/action_supportFragment_to_termsCondPrivPolFragment"
-            app:destination="@id/termsCondPrivPolFragment" />
-        <action
-            android:id="@+id/action_supportFragment_to_contactFragment"
-            app:destination="@id/contactFragment" />
-        <action
-            android:id="@+id/action_supportFragment_to_chatFragment"
-            app:destination="@id/chatFragment" />
+            android:id="@+id/action_roomFragment2_to_roomFeaturesFragment"
+            app:destination="@id/roomFeaturesFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/garbageManagementFragment"
+        android:name="com.example.piu.fragment.GarbageManagementFragment"
+        android:label="fragment_garbage_management"
+        tools:layout="@layout/fragment_garbage_management" >
+        <action
+            android:id="@+id/action_garbageManagementFragment_to_viewTotalRecycleFragment"
+            app:destination="@id/viewTotalRecycleFragment" />
+        <action
+            android:id="@+id/action_garbageManagementFragment_to_recycleCategoriesFragment"
+            app:destination="@id/recycleCategoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewTotalRecycleFragment"
+        android:name="com.example.piu.fragment.ViewTotalRecycleFragment"
+        android:label="fragment_view_total_recycle"
+        tools:layout="@layout/fragment_view_total_recycle" />
+    <fragment
+    android:id="@+id/recycleCategoriesFragment"
+    android:name="com.example.piu.fragment.RecycleCategoriesFragment"
+    android:label="fragment_recycle_categories"
+    tools:layout="@layout/fragment_recycle_categories" />
+    <fragment
+        android:id="@+id/roomFeaturesFragment"
+        android:name="com.example.piu.fragment.RoomFeaturesFragment"
+        android:label="fragment_room_features"
+        tools:layout="@layout/fragment_room_features" />
 
-    <fragment
-        android:id="@+id/termsCondPrivPolFragment"
-        android:name="com.example.piu.fragment.TermsCondPrivPolFragment"
-        android:label="fragment_termscond_privpol"
-        tools:layout="@layout/fragment_termscond_privpol" >
-    </fragment>
-    <fragment
-        android:id="@+id/contactFragment"
-        android:name="com.example.piu.fragment.ContactFragment"
-        android:label="fragment_contact"
-        tools:layout="@layout/fragment_contact" />
-    <fragment
-        android:id="@+id/chatFragment"
-        android:name="com.example.piu.fragment.ChatFragment"
-        android:label="fragment_chat"
-        tools:layout="@layout/fragment_chat" />
-    <fragment
-        android:id="@+id/rulesFragment"
-        android:name="com.example.piu.fragment.RulesFragment"
-        android:label="fragment_rules"
-        tools:layout="@layout/fragment_rules" />
-    <fragment
-        android:id="@+id/accountInfoFragment"
-        android:name="com.example.piu.fragment.AccountInfoFragment"
-        android:label="fragment_account_info"
-        tools:layout="@layout/fragment_account_info" >
-        <action
-            android:id="@+id/action_accountInfoFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-        <action
-            android:id="@+id/action_accountInfoFragment_to_usersFragment"
-            app:destination="@id/usersFragment" />
-        <action
-            android:id="@+id/action_accountInfoFragment_to_changePasswordFragment"
-            app:destination="@id/changePasswordFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/usersFragment"
-        android:name="com.example.piu.fragment.UsersFragment"
-        android:label="fragment_users"
-        tools:layout="@layout/fragment_users" />
-    <fragment
-        android:id="@+id/changePasswordFragment"
-        android:name="com.example.piu.fragment.ChangePasswordFragment"
-        android:label="fragment_change_password"
-        tools:layout="@layout/fragment_change_password" >
-        <action
-            android:id="@+id/action_changePasswordFragment_to_accountInfoFragment"
-            app:destination="@id/accountInfoFragment" />
-    </fragment>
 </navigation>
