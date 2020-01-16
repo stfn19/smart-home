@@ -27,6 +27,9 @@ public class SettingsFragment extends Fragment {
     @BindView(R.id.support_option)
     TextView mSupport;
 
+    @BindView(R.id.rules_option)
+    TextView mRules;
+
     @BindView(R.id.energy_option)
     TextView mEnergy;
 
@@ -48,7 +51,7 @@ public class SettingsFragment extends Fragment {
         mAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(mView).navigate(R.id.action_homeFragment_to_accountInfoFragment);
+                Navigation.findNavController(mView).navigate(R.id.accountInfoFragment);
             }
         });
 
@@ -56,14 +59,21 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onClick(View view) {
 //                if (Navigation.findNavController(mView).getCurrentDestination().getId() == R.id.mSettingsFragment)
-                    Navigation.findNavController(mView).navigate(R.id.action_homeFragment_to_tipsFragment);
+                    Navigation.findNavController(mView).navigate(R.id.tipsFragment);
             }
         });
 
         mSupport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(mView).navigate(R.id.action_homeFragment_to_supportFragment);
+                Navigation.findNavController(mView).navigate(R.id.supportFragment);
+            }
+        });
+
+        mRules.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(mView).navigate(R.id.rulesFragment);
             }
         });
 

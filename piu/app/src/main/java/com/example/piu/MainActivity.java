@@ -14,6 +14,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.piu.fragment.HomeFragment;
+import com.example.piu.fragment.NotificationFragment;
 import com.example.piu.fragment.SettingsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -54,10 +56,10 @@ public class MainActivity extends AppCompatActivity {
                         loadFragment(new SettingsFragment());
                         return true;
                     case R.id.action_notifications:
-                        //TODO:
+                        loadFragment(new NotificationFragment());
                         return true;
                     case R.id.action_home:
-                        //TODO:
+                        loadFragment(new HomeFragment());
                         return true;
                 }
                 return false;
