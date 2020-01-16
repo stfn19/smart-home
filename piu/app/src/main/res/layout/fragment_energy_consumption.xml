@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/energy_consumption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/electric_energy_consumption"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/energy_consumption_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/consumption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/energy_consumption" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tv_consumption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/energy_consumption_circle">
+
+        <ImageView
+            android:id="@+id/tv_color"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/tv_consumption_circle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:maxWidth="240dp"
+            android:text="@string/_0_1"
+            android:textColor="#47525E"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/tv_color"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/tv"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/tv_color"
+            app:layout_constraintTop_toBottomOf="@id/tv_number" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/laptop_consumption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toEndOf="@id/tv_consumption"
+        app:layout_constraintTop_toBottomOf="@id/energy_consumption_circle">
+
+        <ImageView
+            android:id="@+id/laptop_color"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/laptop_consumption_circle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/laptop_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:maxWidth="240dp"
+            android:text="@string/_0_2"
+            android:textColor="#47525E"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/laptop_color"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/laptop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/laptop"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/laptop_color"
+            app:layout_constraintTop_toBottomOf="@id/laptop_number" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fridge_consumption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toEndOf="@id/laptop_consumption"
+        app:layout_constraintTop_toBottomOf="@id/energy_consumption_circle">
+
+        <ImageView
+            android:id="@+id/fridge_color"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/fridge_consumption_circle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fridge_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:maxWidth="240dp"
+            android:text="@string/_0_8"
+            android:textColor="#47525E"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/fridge_color"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fridge_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/fridge"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/fridge_color"
+            app:layout_constraintTop_toBottomOf="@id/fridge_number" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/others_consumption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_consumption">
+
+        <ImageView
+            android:id="@+id/others_color"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/others_consumption_circle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/others_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:maxWidth="240dp"
+            android:text="@string/_1_0"
+            android:textColor="#47525E"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/others_color"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/others_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/others"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/others_color"
+            app:layout_constraintTop_toBottomOf="@id/others_number" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

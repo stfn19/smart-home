@@ -27,6 +27,9 @@ public class SettingsFragment extends Fragment {
     @BindView(R.id.support_option)
     TextView mSupport;
 
+    @BindView(R.id.energy_option)
+    TextView mEnergy;
+
     private View mView;
 
     @Override
@@ -61,6 +64,13 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Navigation.findNavController(mView).navigate(R.id.action_homeFragment_to_supportFragment);
+            }
+        });
+
+        mEnergy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(mView).navigate(R.id.action_homeFragment_to_energyConsumptionFragment);
             }
         });
     }

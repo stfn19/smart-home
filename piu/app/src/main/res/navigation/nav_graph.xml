@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_homeFragment_to_accountInfoFragment"
             app:destination="@id/accountInfoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_energyConsumptionFragment"
+            app:destination="@id/energyConsumptionFragment" />
     </fragment>
 
     <fragment
@@ -118,4 +121,18 @@
             android:id="@+id/action_changePasswordFragment_to_accountInfoFragment"
             app:destination="@id/accountInfoFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/energyConsumptionFragment"
+        android:name="com.example.piu.fragment.EnergyConsumptionFragment"
+        android:label="fragment_energy_consumption"
+        tools:layout="@layout/fragment_energy_consumption" >
+        <action
+            android:id="@+id/action_energyConsumptionFragment_to_tvConsumptionFragment"
+            app:destination="@id/tvConsumptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tvConsumptionFragment"
+        android:name="com.example.piu.fragment.TvConsumptionFragment"
+        android:label="fragment_tv_consumption"
+        tools:layout="@layout/fragment_tv_consumption" />
 </navigation>
