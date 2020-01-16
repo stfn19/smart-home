@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    tools:context="fragment.RoomFragment"
+    android:layout_height="fill_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="fragment.DeviceListFragment"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="36dp">
+
+            <Button
+                android:id="@+id/buttonRound"
+                android:layout_width="155dp"
+                android:layout_height="155dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                android:foreground="@drawable/bed"
+                android:foregroundGravity="center_vertical|center"
+                android:gravity="bottom|center"
+                android:text="Bedroom"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/buttonControl"
+                android:layout_width="155dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="250dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/colorWhite"
+                android:foreground="@drawable/remote"
+                android:foregroundGravity="center_vertical|center"
+                android:gravity="bottom|center"
+                android:text="IR Control: 5"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/buttonLighting"
+                android:layout_width="155dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="250dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/colorWhite"
+                android:foreground="@drawable/light"
+                android:foregroundGravity="center_vertical|center"
+                android:gravity="bottom|center"
+                android:text="Lighting: 5"
+                android:textAllCaps="false"
+
+                />
+
+            <Button
+                android:id="@+id/buttonSensor"
+                android:layout_width="155dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="380dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/colorWhite"
+                android:foreground="@drawable/sensor"
+                android:foregroundGravity="center_vertical|center"
+                android:gravity="bottom|center"
+                android:text="Sensors: 5"
+                android:textAllCaps="false"
+
+                />
+
+            <Button
+                android:id="@+id/buttonCurtains"
+                android:layout_width="155dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="380dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/colorWhite"
+                android:foreground="@drawable/curtains"
+                android:foregroundGravity="center_vertical|center"
+                android:gravity="bottom|center"
+                android:text="Curtains: 10"
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:id="@+id/buttonHVAC"
+                android:layout_width="155dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="510dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/colorWhite"
+                android:foreground="@drawable/hvac"
+                android:foregroundGravity="center_vertical|center"
+                android:gravity="bottom|center"
+                android:text="HVAC: 3"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/buttonSecurity"
+                android:layout_width="155dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="510dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/colorWhite"
+                android:foreground="@drawable/security"
+                android:foregroundGravity="center_vertical|center"
+                android:gravity="bottom|center"
+                android:text="Security: 7"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/buttonClean"
+                android:layout_width="155dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="640dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/colorWhite"
+                android:foreground="@drawable/clean"
+                android:foregroundGravity="center_vertical|center"
+                android:gravity="bottom|center"
+                android:text="Cleaning: 11"
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:id="@+id/buttonMusic"
+                android:layout_width="155dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="640dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/colorWhite"
+                android:foreground="@drawable/music"
+                android:foregroundGravity="center_vertical|center"
+                android:gravity="bottom|center"
+                android:text="Music: 2"
+                android:textAllCaps="false" />
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
