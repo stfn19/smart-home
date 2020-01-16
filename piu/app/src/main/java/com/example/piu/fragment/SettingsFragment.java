@@ -27,6 +27,11 @@ public class SettingsFragment extends Fragment {
     @BindView(R.id.support_option)
     TextView mSupport;
 
+    @BindView(R.id.rules_option)
+    TextView mRules;
+    @BindView(R.id.activity_option)
+    TextView mActivity;
+
     private View mView;
 
     @Override
@@ -61,6 +66,18 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Navigation.findNavController(mView).navigate(R.id.action_homeFragment_to_supportFragment);
+            }
+        });
+        mRules.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(mView).navigate(R.id.action_homeFragment_to_rulesFragment);
+            }
+        });
+        mActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(mView).navigate(R.id.action_homeFragment_to_activityFragment);
             }
         });
     }

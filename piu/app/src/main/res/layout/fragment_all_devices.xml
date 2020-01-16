@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".fragment.AllDevicesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ir_control"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Ir control"
+            android:textAlignment="center"
+            android:paddingTop="25dp"
+            android:textSize="25dp"
+            android:paddingBottom="50dp"></TextView>
+
+        <TextView
+            android:id="@+id/lighting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:paddingTop="25dp"
+            android:text="Light"
+            android:textSize="25dp"
+            android:paddingBottom="50dp">
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/sensors"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Sensors"
+            android:textAlignment="center"
+            android:paddingTop="25dp"
+            android:textSize="25dp"
+            android:paddingBottom="50dp"></TextView>
+
+        <TextView
+            android:id="@+id/curtains"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:paddingTop="25dp"
+            android:text="Curtains"
+            android:textSize="25dp"
+            android:paddingBottom="50dp">
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/hvac"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="HVAC"
+            android:textAlignment="center"
+            android:paddingTop="25dp"
+            android:textSize="25dp"
+            android:paddingBottom="50dp"></TextView>
+
+        <TextView
+            android:id="@+id/security"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:paddingTop="25dp"
+            android:text="Security"
+            android:textSize="25dp"
+            android:paddingBottom="50dp">
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/cleaning"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Cleaning"
+            android:textAlignment="center"
+            android:paddingTop="25dp"
+            android:textSize="25dp"
+            android:paddingBottom="50dp"></TextView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

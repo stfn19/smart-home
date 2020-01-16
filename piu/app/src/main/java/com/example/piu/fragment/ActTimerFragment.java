@@ -20,9 +20,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-
-public class TimerFragment extends Fragment {
-    @BindView(R.id.add_device_view)
+public class ActTimerFragment extends Fragment {
+    @BindView(R.id.add_device_view_t)
     TextView addDeviceView;
 
     private View mView;
@@ -31,7 +30,7 @@ public class TimerFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        mView = inflater.inflate(R.layout.fragment_timer, container, false);
+        mView = inflater.inflate(R.layout.fragment_act_timer, container, false);
         ButterKnife.bind(this, mView);
         return mView;
     }
@@ -42,7 +41,7 @@ public class TimerFragment extends Fragment {
         addDeviceView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(mView).navigate(R.id.action_timerFragment_to_newRuleFragment);
+                Navigation.findNavController(mView).navigate(R.id.action_actTimerFragment_to_newActivityFragment);
             }
         });
 
