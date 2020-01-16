@@ -27,6 +27,8 @@ import butterknife.ButterKnife;
 
 
 
+import butterknife.ButterKnife;
+
 public class RulesFragment extends Fragment {
 
 

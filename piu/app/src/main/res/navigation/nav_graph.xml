@@ -37,9 +37,21 @@
         <action
             android:id="@+id/action_homeFragment_to_supportFragment"
             app:destination="@id/supportFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_homeFragment_to_rulesFragment"-->
+<!--            app:destination="@id/rulesFragment" />-->
         <action
             android:id="@+id/action_homeFragment_to_accountInfoFragment"
             app:destination="@id/accountInfoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_deviceListFragment"
+            app:destination="@id/deviceListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_roomFragment2"
+            app:destination="@id/roomFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_garbageManagementFragment"
+            app:destination="@id/garbageManagementFragment" />
         <action
             android:id="@+id/action_homeFragment_to_rulesFragment"
             app:destination="@id/rulesFragment" />
@@ -76,8 +88,8 @@
             android:id="@+id/action_newRuleFragment_to_timerFragment"
             app:destination="@id/timerFragment" />
         <action
-            android:id="@+id/action_newRuleFragment_to_allDevicesFragment"
-            app:destination="@id/allDevicesFragment" />
+            android:id="@+id/action_newRuleFragment_to_deviceListFragment"
+            app:destination="@id/deviceListFragment" />
     </fragment>
     <fragment
         android:id="@+id/newActivityFragment"
@@ -89,13 +101,7 @@
             app:destination="@id/actTimerFragment" />
         <action
             android:id="@+id/action_newActivityFragment_to_allDevicesFragment"
-            app:destination="@id/allDevicesFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/allDevicesFragment"
-        android:name="com.example.piu.fragment.AllDevicesFragment"
-        android:label="fragment_all_devices"
-        tools:layout="@layout/fragment_all_devices">
+            app:destination="@id/deviceListFragment" />
     </fragment>
     <fragment
         android:id="@+id/timerFragment"
@@ -115,6 +121,7 @@
             android:id="@+id/action_actTimerFragment_to_newActivityFragment"
             app:destination="@id/newActivityFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/tipsFragment"
         android:name="com.example.piu.fragment.TipsFragment"
@@ -129,7 +136,54 @@
         <action
             android:id="@+id/action_settingsFragment_to_tipsFragment"
             app:destination="@id/tipsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_garbageManagementFragment"
+            app:destination="@id/garbageManagementFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/deviceListFragment"
+        android:name="com.example.piu.fragment.DeviceListFragment"
+        android:label="fragment_device_list"
+        tools:layout="@layout/fragment_device_list" />
+    <fragment
+        android:id="@+id/roomFragment2"
+        android:name="com.example.piu.fragment.RoomFragment"
+        android:label="fragment_room"
+        tools:layout="@layout/fragment_room">
+        <argument
+            android:name="roomName"
+            app:argType="string[]" />
+        <action
+            android:id="@+id/action_roomFragment2_to_roomFeaturesFragment"
+            app:destination="@id/roomFeaturesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/garbageManagementFragment"
+        android:name="com.example.piu.fragment.GarbageManagementFragment"
+        android:label="fragment_garbage_management"
+        tools:layout="@layout/fragment_garbage_management" >
+        <action
+            android:id="@+id/action_garbageManagementFragment_to_viewTotalRecycleFragment"
+            app:destination="@id/viewTotalRecycleFragment" />
+        <action
+            android:id="@+id/action_garbageManagementFragment_to_recycleCategoriesFragment"
+            app:destination="@id/recycleCategoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewTotalRecycleFragment"
+        android:name="com.example.piu.fragment.ViewTotalRecycleFragment"
+        android:label="fragment_view_total_recycle"
+        tools:layout="@layout/fragment_view_total_recycle" />
+    <fragment
+    android:id="@+id/recycleCategoriesFragment"
+    android:name="com.example.piu.fragment.RecycleCategoriesFragment"
+    android:label="fragment_recycle_categories"
+    tools:layout="@layout/fragment_recycle_categories" />
+    <fragment
+        android:id="@+id/roomFeaturesFragment"
+        android:name="com.example.piu.fragment.RoomFeaturesFragment"
+        android:label="fragment_room_features"
+        tools:layout="@layout/fragment_room_features" />
     <fragment
         android:id="@+id/supportFragment"
         android:name="com.example.piu.fragment.SupportFragment"

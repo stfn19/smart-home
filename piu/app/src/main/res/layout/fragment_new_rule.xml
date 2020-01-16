@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context="fragment.NewRuleFragment"
     android:orientation="vertical"
-    android:background="#fff"
-    tools:context=".fragment.NewRuleFragment">
+    android:background="#fff">
 
     <TextView
         android:id="@+id/new_rule_option"
@@ -32,10 +33,10 @@
             android:layout_height="wrap_content"
             android:background="#C4008020"
             android:paddingTop="25dp"
-            android:paddingBottom="50dp"
             android:text="Add devices"
             android:textAlignment="center"
-            android:textSize="25dp"></TextView>
+            android:textSize="25dp"
+            android:paddingBottom="50dp"></TextView>
 
         <TextView
             android:id="@+id/timer_view"

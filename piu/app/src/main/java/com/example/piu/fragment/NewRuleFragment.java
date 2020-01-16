@@ -60,13 +60,13 @@ public class NewRuleFragment extends Fragment {
         addDevice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(mView).navigate(R.id.action_newRuleFragment_to_allDevicesFragment);
+                Navigation.findNavController(mView).navigate(R.id.deviceListFragment);
             }
         });
         addDevice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(mView).navigate(R.id.action_newRuleFragment_to_allDevicesFragment);
+                Navigation.findNavController(mView).navigate(R.id.deviceListFragment);
             }
         });
 
