@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#fff">
+    android:background="#fff"
+    tools:context=".fragment.ActivityFragment">
+
     <TextView
-        android:id="@+id/rules_tab"
+        android:id="@+id/activity_tab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Rules"
+        android:text="Activity"
         android:height="50dp"
         android:textSize="20dp"
         android:paddingTop="10dp"
@@ -18,25 +19,25 @@
         >
     </TextView>
     <TextView
-        android:id="@+id/new_rule_option"
+        android:id="@+id/new_activity_option"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="New rule"
+        android:text="New activity"
         android:textSize="20dp"
         android:paddingTop="10dp"
         android:height="50dp"
         ></TextView>
     <TextView
-        android:id="@+id/edit_rule_option"
+        android:id="@+id/edit_activity_option"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Edit rule"
+        android:text="Edit activity"
         android:textSize="20dp"
         android:paddingTop="10dp"
         android:height="50dp"
         ></TextView>
     <ListView
-        android:id="@+id/rules_list"
+        android:id="@+id/activity_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

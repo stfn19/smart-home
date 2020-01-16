@@ -37,9 +37,9 @@
         <action
             android:id="@+id/action_homeFragment_to_supportFragment"
             app:destination="@id/supportFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_rulesFragment"
-            app:destination="@id/rulesFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_homeFragment_to_rulesFragment"-->
+<!--            app:destination="@id/rulesFragment" />-->
         <action
             android:id="@+id/action_homeFragment_to_accountInfoFragment"
             app:destination="@id/accountInfoFragment" />
@@ -52,6 +52,74 @@
         <action
             android:id="@+id/action_homeFragment_to_garbageManagementFragment"
             app:destination="@id/garbageManagementFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_rulesFragment"
+            app:destination="@id/rulesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_activityFragment"
+            app:destination="@id/activityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.example.piu.fragment.RulesFragment"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules">
+        <action
+            android:id="@+id/action_rulesFragment_to_newRuleFragment"
+            app:destination="@id/newRuleFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/activityFragment"
+        android:name="com.example.piu.fragment.ActivityFragment"
+        android:label="fragment_activity"
+        tools:layout="@layout/fragment_activity">
+        <action
+            android:id="@+id/action_activityFragment_to_newActivityFragment"
+            app:destination="@id/newActivityFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/newRuleFragment"
+        android:name="com.example.piu.fragment.NewRuleFragment"
+        android:label="fragment_new_rule"
+        tools:layout="@layout/fragment_new_rule">
+        <action
+            android:id="@+id/action_newRuleFragment_to_timerFragment"
+            app:destination="@id/timerFragment" />
+        <action
+            android:id="@+id/action_newRuleFragment_to_deviceListFragment"
+            app:destination="@id/deviceListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newActivityFragment"
+        android:name="com.example.piu.fragment.NewActivityFragment"
+        android:label="fragment_new_activity"
+        tools:layout="@layout/fragment_new_activity">
+        <action
+            android:id="@+id/action_newActivityFragment_to_actTimerFragment"
+            app:destination="@id/actTimerFragment" />
+        <action
+            android:id="@+id/action_newActivityFragment_to_allDevicesFragment"
+            app:destination="@id/deviceListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="com.example.piu.fragment.TimerFragment"
+        android:label="fragment_timer"
+        tools:layout="@layout/fragment_timer">
+        <action
+            android:id="@+id/action_timerFragment_to_newRuleFragment"
+            app:destination="@id/newRuleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/actTimerFragment"
+        android:name="com.example.piu.fragment.ActTimerFragment"
+        android:label="fragment_act_timer"
+        tools:layout="@layout/fragment_act_timer">
+        <action
+            android:id="@+id/action_actTimerFragment_to_newActivityFragment"
+            app:destination="@id/newActivityFragment" />
     </fragment>
 
     <fragment
@@ -149,11 +217,6 @@
         android:label="fragment_chat"
         tools:layout="@layout/fragment_chat" />
     <fragment
-        android:id="@+id/rulesFragment"
-        android:name="com.example.piu.fragment.RulesFragment"
-        android:label="fragment_rules"
-        tools:layout="@layout/fragment_rules" />
-    <fragment
         android:id="@+id/accountInfoFragment"
         android:name="com.example.piu.fragment.AccountInfoFragment"
         android:label="fragment_account_info"
@@ -182,5 +245,4 @@
             android:id="@+id/action_changePasswordFragment_to_accountInfoFragment"
             app:destination="@id/accountInfoFragment" />
     </fragment>
-
 </navigation>

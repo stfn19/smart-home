@@ -19,7 +19,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SettingsFragment extends Fragment  implements OnBackPressed{
+public class SettingsFragment extends Fragment implements OnBackPressed{
     private SettingsFragment mSettingsFragment = null;
 
     public SettingsFragment getSettingsFragment() {
@@ -41,6 +41,8 @@ public class SettingsFragment extends Fragment  implements OnBackPressed{
 
     @BindView(R.id.rules_option)
     TextView mRules;
+    @BindView(R.id.activity_option)
+    TextView mActivity;
 
     private View mView;
 
@@ -92,7 +94,12 @@ public class SettingsFragment extends Fragment  implements OnBackPressed{
             }
         });
 
-
+        mActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(mView).navigate(R.id.activityFragment);
+            }
+        });
     }
 
     @Override

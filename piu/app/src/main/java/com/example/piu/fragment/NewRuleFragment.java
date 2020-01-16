@@ -1,37 +1,75 @@
 package com.example.piu.fragment;
 
+import android.content.Context;
+import android.net.Uri;
+import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
-import android.os.Bundle;
-import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.piu.R;
 
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+
+
 public class NewRuleFragment extends Fragment {
+
+    @BindView(R.id.timer_view)
+    TextView timerView;
+    @BindView(R.id.add_img)
+    ImageView addDevice;
+
+    @BindView(R.id.add_new_device)
+    TextView addDevice2;
+
+
+    private View mView;
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        return inflater.inflate(R.layout.fragment_new_rule, container, false);
+        mView = inflater.inflate(R.layout.fragment_new_rule, container, false);
+        ButterKnife.bind(this, mView);
+        return mView;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-    }
 
-    //TODO: getMenuInflater() is not supported in Fragments??
-//    @Override
-//    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-//        super.onCreateContextMenu(menu, v, menuInfo);
-//        if(v.getId()==R.id.devices_list){
-//            getMenuInflater().inflate(R.menu.add_remove_device_menu,menu);
-//        }
-//    }
+        timerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(mView).navigate(R.id.action_newRuleFragment_to_timerFragment);
+            }
+        });
+        addDevice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(mView).navigate(R.id.deviceListFragment);
+            }
+        });
+        addDevice2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(mView).navigate(R.id.deviceListFragment);
+            }
+        });
+
+
+    }
 }
