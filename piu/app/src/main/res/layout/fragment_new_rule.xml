@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewRule"
-    android:orientation="vertical">
+    tools:context="fragment.NewRuleFragment"
+    android:orientation="vertical"
+    android:background="#fff">
     <TextView
         android:id="@+id/new_rule_option"
         android:layout_width="match_parent"

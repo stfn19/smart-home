@@ -12,17 +12,29 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.piu.R;
+import com.example.piu.model.OnBackPressed;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SettingsFragment extends Fragment {
+public class SettingsFragment extends Fragment  implements OnBackPressed{
+    private SettingsFragment mSettingsFragment = null;
+
+    public SettingsFragment getSettingsFragment() {
+        if (mSettingsFragment == null) mSettingsFragment = new SettingsFragment();
+        return mSettingsFragment;
+    }
 
     @BindView(R.id.account_option)
     TextView mAccount;
 
     @BindView(R.id.tips_option)
     TextView mTips;
+
+    @BindView(R.id.garbage_option)
+    TextView mGarbageOption;
 
     @BindView(R.id.support_option)
     TextView mSupport;
@@ -44,6 +56,12 @@ public class SettingsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+       // if (Navigation.findNavController(mView).getCurrentDestination().getId() == R.id.settingsFragment){
+        mGarbageOption.setOnClickListener(view1 ->{
+        //if (Navigation.findNavController(mView).getCurrentDestination().getId() == R.id.settingsFragment) {
+            Navigation.findNavController(mView).navigate(R.id.garbageManagementFragment);
+
+        });
 
         mAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +74,7 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onClick(View view) {
 //                if (Navigation.findNavController(mView).getCurrentDestination().getId() == R.id.mSettingsFragment)
-                    Navigation.findNavController(mView).navigate(R.id.tipsFragment);
+                Navigation.findNavController(mView).navigate(R.id.tipsFragment);
             }
         });
 
@@ -73,10 +91,14 @@ public class SettingsFragment extends Fragment {
                 Navigation.findNavController(mView).navigate(R.id.rulesFragment);
             }
         });
+
+
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
     }
+
+    public void onBackPressed() { getActivity().getSupportFragmentManager().popBackStack();}
 }
