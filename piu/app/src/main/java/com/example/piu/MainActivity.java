@@ -15,9 +15,10 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.piu.fragment.HomeFragment;
-import com.example.piu.fragment.NotificationFragment;
 import com.example.piu.fragment.SettingsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -56,10 +57,10 @@ public class MainActivity extends AppCompatActivity {
                         loadFragment(new SettingsFragment());
                         return true;
                     case R.id.action_notifications:
-                        loadFragment(new NotificationFragment());
+                        //TODO:
                         return true;
                     case R.id.action_home:
-                        loadFragment(new HomeFragment());
+                        //TODO:
                         return true;
                 }
                 return false;
@@ -74,5 +75,16 @@ public class MainActivity extends AppCompatActivity {
 //        transaction.addToBackStack(null);
         transaction.commit();
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 
+    private void tellFragments(){
+        List<Fragment> fragments = getSupportFragmentManager().getFragments();
+        for(Fragment f : fragments){
+            if(f != null && f instanceof HomeFragment)
+                ((HomeFragment)f).onBackPressed();
+        }
+    }
 }

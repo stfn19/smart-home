@@ -1,15 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.DeviceListFragment">
+    tools:context="fragment.DeviceListFragment"
+    android:orientation="vertical">
 
-    <ListView
-        android:id="@+id/devices_list"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/all_devices"
+        android:textColor="#47525E"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"/>
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-16dp">
 
-    </ListView>
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="155dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorWhite"
+            android:foreground="@drawable/remote"
+            android:text="IR Control: 5"
+            android:textAllCaps="false"
+            android:gravity="bottom|center"
+            android:foregroundGravity="center_vertical|center"
 
-</FrameLayout>
+            />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="155dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorWhite"
+            android:foreground="@drawable/light"
+            android:text="Lighting: 5"
+            android:textAllCaps="false"
+            android:gravity="bottom|center"
+            android:foregroundGravity="center_vertical|center"
+
+            />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="155dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorWhite"
+            android:foreground="@drawable/sensor"
+            android:text="Sensors: 5"
+            android:textAllCaps="false"
+            android:gravity="bottom|center"
+            android:foregroundGravity="center_vertical|center"
+
+            />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="155dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorWhite"
+            android:foreground="@drawable/curtains"
+            android:text="Curtains: 10"
+            android:textAllCaps="false"
+            android:gravity="bottom|center"
+            android:foregroundGravity="center_vertical|center"
+            />
+
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="155dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="310dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorWhite"
+            android:foreground="@drawable/hvac"
+            android:foregroundGravity="center_vertical|center"
+            android:text="HVAC: 3"
+            android:textAllCaps="false"
+            android:gravity="bottom|center"/>
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="155dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="310dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorWhite"
+            android:foreground="@drawable/security"
+            android:foregroundGravity="center_vertical|center"
+            android:text="Security: 7"
+            android:textAllCaps="false"
+            android:gravity="bottom|center" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="155dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="440dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorWhite"
+            android:foreground="@drawable/clean"
+            android:foregroundGravity="center_vertical|center"
+            android:text="Cleaning: 11"
+            android:textAllCaps="false"
+            android:gravity="bottom|center" />
+
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="155dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="440dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorWhite"
+            android:foreground="@drawable/music"
+            android:foregroundGravity="center_vertical|center"
+            android:text="Music: 2"
+            android:textAllCaps="false"
+            android:gravity="bottom|center" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
